@@ -5,7 +5,7 @@
     margin: 3% 3%;
 }
 
-.conversioni{
+.conversioni {
     /*border: 2px solid lightblue;*/
     width: 55%;
     height:fit-content;
@@ -13,15 +13,15 @@
     display: flex;
     flex-direction: column;
 }
-#tortiera1{
+#tortiera1 {
     text-align: right;
 }
 
-#tortiera2{
+#tortiera2 {
     text-align: right;
     padding-bottom: 3%;
 }
 
-button, #calcolaPersoneRisultato, #calcolaTortieraRisultato{
+button, #calcolaPersoneRisultato, #calcolaTortieraRisultato {
     align-self: flex-end;    
 }
