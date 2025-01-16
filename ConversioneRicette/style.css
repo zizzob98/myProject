@@ -1,6 +1,27 @@
 #corpo{
-    border: 5px solid rgb(0, 81, 255);
+    border: 5px solid rgb(7, 102, 226);
     width: 94%;
     height: 94%;
     margin: 3% 3%;
+}
+
+.conversioni{
+    /*border: 2px solid lightblue;*/
+    width: 60%;
+    height:fit-content;
+    padding: 3% 3%;
+    display: flex;
+    flex-direction: column;
+}
+#tortiera1{
+    text-align: right;
+}
+
+#tortiera2{
+    text-align: right;
+    padding-bottom: 3%;
+}
+
+button, #calcolaPersoneRisultato, #calcolaTortieraRisultato{
+    align-self: flex-end;    
 }

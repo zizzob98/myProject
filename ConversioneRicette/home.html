@@ -1,20 +1,61 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> Titolo </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script>
-            function funzione(){
-                document.getElementById("casella").value="ciao";
-                document.getElementById("corpo").style.backgroundColor = "green";
-            }
-        </script>
-    </head>
-    <body>
-        <div id="corpo">
-            <div style="text-align: center;"><font size="6">Titolo Pagina</font></div>
-            <label for="casella" id="etichetta">Casella</label><input type="text" id="casella">
-            <button name="Invia" type="button" onclick="funzione()"> Invia </button>
-        </div>
-    </body>
+<head>
+    <title> Conversione Ricette </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function conversioneTortiera() {
+            // Ottieni i valori dagli input
+            let x = parseFloat(document.getElementById("tortieraDa").value.trim());
+            let y = parseFloat(document.getElementById("tortieraA").value.trim());
 
+            if (isNaN(x) || isNaN(y)) {
+                document.getElementById("calcolaTortieraRisultato").innerText = "Errore: uno o entrambi i valori non sono numerici";
+            } else {
+                document.getElementById("calcolaTortieraRisultato").innerText = "Moltiplica la quantità per: " + ((y*y) / (x*x)).toFixed(2);
+            }
+        }
+        function conversionePersone() {
+            // Ottieni i valori dagli input
+            let x = parseFloat(document.getElementById("personaDa").value.trim());
+            let y = parseFloat(document.getElementById("personaA").value.trim());
+
+            if (isNaN(x) || isNaN(y)) {
+                document.getElementById("calcolaPersoneRisultato").innerText = "Errore: uno o entrambi i valori non sono numerici";
+            } else {
+                document.getElementById("calcolaPersoneRisultato").innerText = "Moltiplica la quantità per: " + (y / x).toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="corpo">
+        <div style="text-align: center; font-size: xx-large; font-weight: 900;">Conversione</div>
+        <div class="conversioni">
+            <div id="tortiera1">
+                <label for="tortieraDa">Converti da tortiera di diametro:</label>
+                <input type="text" id="tortieraDa" style="width: 30px;">
+            </div>
+            <div id="tortiera2">
+                <label for="tortieraA">A tortiera di diametro:</label>
+                <input type="text" id="tortieraA" style="width: 30px;">
+            </div>
+            <button name="calcolaTortiera" type="button" onClick="conversioneTortiera()" id="calcolaTortiera"> Calcola </button>
+            <div id="calcolaTortieraRisultato"></div>
+        </div>
+
+        <div class="conversioni">
+            <div id="tortiera1">
+                <label for="personaDa">Persone previste per la ricetta:</label>
+                <input type="text" id="personaDa" style="width: 30px;">
+            </div>
+            <div id="tortiera2">
+                <label for="personaA">Persone da calcolare per la ricetta:</label>
+                <input type="text" id="personaA" style="width: 30px;">
+            </div>
+            <button name="calcolaPersone" type="button" onClick="conversionePersone()" id="calcolaPersone"> Calcola </button>
+            <div id="calcolaPersoneRisultato"></div> <!-- Ho cambiato l'ID per evitare conflitti -->
+        </div>
+    </div>
+</body>
 </html>
