@@ -25,3 +25,7 @@
 button, #calcolaPersoneRisultato, #calcolaTortieraRisultato {
     align-self: flex-end;    
 }
+
+*{
+    font-size: xx-large;
+}
