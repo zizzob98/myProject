@@ -31,5 +31,5 @@ button, #calcolaPersoneRisultato, #calcolaTortieraRisultato {
 }
 
 input[type="text"]{
-    width: 5;
+    width: 30px;
 }
