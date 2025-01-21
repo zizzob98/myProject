@@ -30,6 +30,7 @@
 <body>
     <div id =" corpo">
         <div style="text-align: center; font-size: xx-large; font-weight: 900;">Conversione</div>
+        <!-- Converte le quantità degli ingredienti in base alla tortiera-->
         <div class="conversioni">
             <div id="tortiera1">
                 <label for="tortieraDa">Converti da tortiera di diametro:</label>
@@ -42,6 +43,7 @@
             <button name="calcolaTortiera" type="button" onClick="conversioneTortiera()" id="calcolaTortiera"> Calcola </button>
             <div id="calcolaTortieraRisultato"></div>
         </div>
+        <!-- Converte le quantità degli ingredienti in base al numero di persone-->
 
         <div class="conversioni">
             <div id="tortiera1">
@@ -55,9 +57,25 @@
             <button name="calcolaPersone" type="button" onClick="conversionePersone()" id="calcolaPersone"> Calcola </button>
             <div id="calcolaPersoneRisultato"></div> <!-- Ho cambiato l'ID per evitare conflitti -->
         </div>
-        <img src="Conversioni.jpg" alt="non si vede">
+        <!-- Converte il tempo di cottura in relazione alla tortiera usata-->
+
         <div class="conversioni">
+            <div id="tortiera1">
+                <label for="personaDa">Tempo di cottura originale:</label>
+                <input type="text" id="personaDa" style="width: 40px;">
+            </div>
+            <div id="tortiera2">
+                <label for="personaA">Diametro tortiera originale:</label>
+                <input type="text" id="personaA" style="width: 40px;">
+            </div>
+            <div id="tortiera3">
+                <label for="personaAA">Diametro tortiera usata:</label>
+                <input type="text" id="personaAA" style="width: 40px;">
+            </div>
+            <button name="calcolaTempo" type="button" onClick="conversioneTempo()" id="calcolaTempo"> Calcola </button>
+            <div id="calcolaTempoRisultato"></div> <!-- Ho cambiato l'ID per evitare conflitti -->
         </div>
+
     </div>
 </body>
 </html>

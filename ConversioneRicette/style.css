@@ -22,7 +22,12 @@
     padding-bottom: 3%;
 }
 
-button, #calcolaPersoneRisultato, #calcolaTortieraRisultato {
+#tortiera3 {
+    text-align: right;
+    padding-bottom: 3%;
+}
+
+button, #calcolaPersoneRisultato, #calcolaTortieraRisultato, #calcolaTempoRisultato {
     align-self: flex-end;    
 }
 
