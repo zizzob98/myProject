@@ -25,6 +25,19 @@
                 document.getElementById("calcolaPersoneRisultato").innerText = "Moltiplica la quantità per: " + (y / x).toFixed(2);
             }
         }
+
+        function conversioneTempo() {
+            // Ottieni i valori dagli input
+            let x = parseFloat(document.getElementById("cotturaOriginale").value.trim());
+            let y = parseFloat(document.getElementById("tortieraOriginale").value.trim());
+            let z = parseFloat(document.getElementById("tortieraUsata").value.trim());
+
+            if (isNaN(x) || isNaN(y) || isNaN(z)) {
+                document.getElementById("calcolaTempoRisultato").innerText = "Errore: uno o entrambi i valori non sono numerici";
+            } else {
+                document.getElementById("calcolaTempoRisultato").innerText = "Il nuovo tempo di cottura sarà: " + (x*Math.pow(z/y,2)).toFixed(0) + "minuti";
+            }
+        }
     </script>
 </head>
 <body>
@@ -61,16 +74,16 @@
 
         <div class="conversioni">
             <div id="tortiera1">
-                <label for="personaDa">Tempo di cottura originale:</label>
-                <input type="text" id="personaDa" style="width: 40px;">
+                <label for="cotturaOriginale">Tempo di cottura originale:</label>
+                <input type="text" id="cotturaOriginale" style="width: 40px;">
             </div>
             <div id="tortiera3">
-                <label for="personaA">Diametro tortiera originale:</label>
-                <input type="text" id="personaA" style="width: 40px;">
+                <label for="tortieraOriginale">Diametro tortiera originale:</label>
+                <input type="text" id="tortieraOriginale" style="width: 40px;">
             </div>
             <div id="tortiera2">
-                <label for="personaAA">Diametro tortiera usata:</label>
-                <input type="text" id="personaAA" style="width: 40px;">
+                <label for="tortieraUsata">Diametro tortiera usata:</label>
+                <input type="text" id="tortieraUsata" style="width: 40px;">
             </div>
             <button name="calcolaTempo" type="button" onClick="conversioneTempo()" id="calcolaTempo"> Calcola </button>
             <div id="calcolaTempoRisultato"></div> <!-- Ho cambiato l'ID per evitare conflitti -->
