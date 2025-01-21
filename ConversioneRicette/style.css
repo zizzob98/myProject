@@ -29,3 +29,7 @@ button, #calcolaPersoneRisultato, #calcolaTortieraRisultato {
 *{
     font-size: xx-large;
 }
+
+input text{
+    color:red
+}
