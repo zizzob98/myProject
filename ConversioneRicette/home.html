@@ -32,10 +32,18 @@
             let y = parseFloat(document.getElementById("tortieraOriginale").value.trim());
             let z = parseFloat(document.getElementById("tortieraUsata").value.trim());
 
+
+
             if (isNaN(x) || isNaN(y) || isNaN(z)) {
                 document.getElementById("calcolaTempoRisultato").innerText = "Errore: uno o entrambi i valori non sono numerici";
             } else {
-                document.getElementById("calcolaTempoRisultato").innerText = "Il nuovo tempo di cottura sarà: " + (x*Math.pow(z/y,2)).toFixed(0) + "minuti";
+
+                y = Math.PI * Math.pow(y / 2, 2)
+                z = Math.PI * Math.pow(z / 2, 2);
+                let rapportoAree = z / y;
+                let nuovoTempoCottura = x * Math.sqrt(rapportoAree);
+
+                document.getElementById("calcolaTempoRisultato").innerText = "Il nuovo tempo di cottura sarà: " + nuovoTempoCottura.toFixed(0) + "minuti";
             }
         }
     </script>
